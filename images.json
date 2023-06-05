@@ -1,0 +1,17 @@
+[
+    {
+      "src": "src/ciel-nocturne-colore-etoiles-nebuleuse.jpg",
+      "title": "Image 1",
+      "description": "Description de l'image 1"
+    },
+    {
+      "src": "src/fond-ecran-abstrait-nebuleuse-ultra-detaille-8.jpg",
+      "title": "Image 2",
+      "description": "Description de l'image 2"
+    },
+    {   
+    "src": "src/fond-espace-poussiere-etoiles-etoiles-brillantes-cosmos-colore-realiste-nebuleuse-voie-lactee.jpg",
+    "title": "Image 3",
+    "description": "Description de l'image 3"
+    }
+  ]
