@@ -17,9 +17,9 @@ console.log(btnElB, "btnElB button_sliderModal");
 const btnLabel = document.querySelector(".button_slider button");
 console.log(btnLabel, "btnLabel button_slider");
 
-btnElB.addEventListener("click", e=>{
-    contentText.classList.toggle("displayNone");
-    btnElB.classList.toggle("modal");
+btnElB.addEventListener("click", e => {
+  contentText.classList.toggle("displayNone");
+  btnElB.classList.toggle("modal");
   btnLabel.classList.toggle("hide");
 });
 

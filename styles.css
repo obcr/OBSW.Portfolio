@@ -5,7 +5,7 @@
 }
 
 :root {
-  --padding-container: 16;
+  --padding-container: 16px;
   --max-container: 1400px;
   --font-size-title: clamp(4.05rem, 18.78vw + -1.64rem, 11.26rem);
   --bg: hsl(0, 0%, 100%);
@@ -18,6 +18,7 @@
 li {
   list-style-type: none;
 }
+
 li:hover {
   color: red;
 }
@@ -37,7 +38,6 @@ header {
   background-color: #151515;
   height: 100vh;
   overflow: hidden;
-  /* Empêcher le débordement du contenu */
 }
 
 .vertical-main {
@@ -65,18 +65,16 @@ header {
   top: 7px;
   color: #ffffff;
 }
+
 .blackTogle {
   color: #000000;
 }
 
 .land {
   overflow: hidden;
-  /* Empêcher le débordement du contenu */
   margin: 30px;
-  /* padding: 20px; */
   border: 1px solid rgb(255, 255, 255);
   height: calc(100% - 60px);
-  /* Ajoutez d'autres styles à votre carte ici */
 }
 
 h1,
@@ -85,8 +83,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-
-
 /* slider */
 
 .content-text {
@@ -94,180 +90,92 @@ h2 {
 }
 
 #sliderFx {
-  height: 100dvh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
-@supports (height: 100dvh) {
+@supports (height: 100vh) {
   #sliderFx {
-    height: 100dvh;
+    height: 100vh;
   }
 }
 
-/*-----
-  
-    Button content
-  
-  -----*/
-  .button_slider {
-    margin-top: 15px;
-    width: 100px;
-    height: 100px;
-    background: rgb(255, 255, 255);
-    border-radius: 100px;
-    transition: 0.5s;
-    cursor: pointer;
-    overflow: hidden;
-  }
-  .button_slider button{
-    line-height: 100px;
-    width: 100%;
-    text-align: center;
-    pointer-events: none;
-    border-radius: 100px;
-    border: solid 5px var(--color-alt);
-    background: none;
-    font-weight: bold;
-    color: var(--color-alt);
-    
-  }
-  .displayNone{
-    display: none;
-  }
-  .modal{
-    border-radius: 0;
-    width: 150%;
-    height: 110vh;
-  }
-  .hide{
-    animation: hide 0.5s forwards;
-    animation-delay: 0.25s;
-    
-  }
-  @keyframes hide{
-    to{
-      opacity: 0;
-      transform: translateY(-100px);
-    }
-  }
-  /*-----
-  
-    Inside content
-  
-  -----*/
+/* Button content */
 
-  .contentModal{
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    width: 80vw;
-    margin: auto;
-    align-items: stretch;
-  }
-  .contentModal > *{
-    /* margin-bottom: 1rem; */
-    /* margin-top: 100px; */
-    font-family: sans-serif;
-    color: black;
-  }
-  .contentModal p{
-    line-height: 150%;
-  }
-  
-  .contentModal a{
-    font-weight: bold;
-    float: right;
-  }
-  .contentModal a :visited{
-    color: inherit;
-  }
-
-/* .button_slider {
-  margin-top: 10px;
-  background-color: rgb(0, 0, 0);
-  border: #ffffff solid 2px;
-  padding: 20px 40px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  position: relative;
+.button_slider {
+  margin-top: 15px;
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 255, 255);
+  border-radius: 100px;
+  transition: 0.5s;
+  cursor: pointer;
   overflow: hidden;
-} */
-
-/* .button_slider span {
-  position: relative;
-  z-index: 1;
 }
 
-.button_slider::before {
-  content: "";
-  position: absolute;
-  background-color: rgb(0, 255, 234);
-  width: 0;
-  height: 0;
-  left: var(--xPos);
-  top: var(--yPos);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  transition: width 0.5s, height 0.5s;
-}
-
-.button_slider:hover::before {
-  width: 300px;
-  height: 300px;
-} */
-
-/* .card::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  height: 100%;
+.button_slider button {
+  line-height: 100px;
   width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-} */
-
-/* Slight parallax effect on hover */
-.card:hover .content {
-  transform: translateZ(12px);
+  text-align: center;
+  pointer-events: none;
+  border-radius: 100px;
+  border: solid 5px var(--color-alt);
+  background: none;
+  font-weight: bold;
+  color: var(--color-alt);
 }
 
-.content {
-  margin-bottom: 110px;
-  margin-left: 20px;
-  margin-right: 20px;
+.displayNone {
+  display: none;
+}
+
+.modal {
+  border-radius: 0;
+  width: 150%;
+  height: 110vh;
+}
+
+.hide {
+  animation: hide 0.5s forwards;
+  animation-delay: 0.25s;
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+/* Inside content */
+
+.contentModal {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  z-index: 1000;
-  transition: transform 0.3s ease;
+  padding: 40px;
+  width: 80vw;
+  margin: auto;
+  align-items: stretch;
 }
 
-/* Fondu effect transition */
-
-.fade-in-bg {
-  animation-name: fadeInOpacity-bg;
-  /* animation-iteration-count: 1; */
-  animation-timing-function: easeOut 0.5s;
+.contentModal > * {
+  font-family: sans-serif;
+  color: black;
 }
 
-@keyframes fadeInOpacity-bg {
-  0% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.contentModal p {
+  line-height: 150%;
 }
 
-/* Blend Mode */
+.contentModal a {
+  font-weight: bold;
+  float: right;
+}
+
+.contentModal a:visited {
+  color: inherit;
+}
 
 .blob {
   position: absolute;
@@ -296,11 +204,9 @@ h2 {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* padding: 40px; */
   position: relative;
   transition: transform 0.1s ease;
   color: #ffffff;
-  /* color: #f01093; */
   transform-style: preserve-3d;
   will-change: transform;
   mix-blend-mode: difference;
@@ -340,7 +246,6 @@ footer {
   position: fixed;
   inset-block-end: 80px;
   inset-inline-end: 70px;
-  /* z-index: 1000; */
 }
 
 footer button {
@@ -357,18 +262,18 @@ footer button:hover {
 .moon {
   position: absolute;
   color: #ffffff;
-  width: 1em; /* Taille de l'icône */
-  height: 1em; /* Taille de l'icône */
-  font-size: 24px; /* Taille de la police de l'icône */
+  width: 1em;
+  height: 1em;
+  font-size: 24px;
 }
+
 .sun {
   position: absolute;
   color: #ffffff;
-  width: 1em; /* Taille de l'icône */
-  height: 1em; /* Taille de l'icône */
-  font-size: 24px; /* Taille de la police de l'icône */
+  width: 1em;
+  height: 1em;
+  font-size: 24px;
 }
-
 
 footer button #sun,
 footer button #moon {
