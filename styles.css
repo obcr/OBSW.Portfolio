@@ -24,6 +24,15 @@ li:hover {
 
 body {
   font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  overflow-y: auto; /* Active le défilement vertical si nécessaire */
+}
+
+@media (max-width: 768px) {
+  /* Styles spécifiques aux appareils mobiles et tablettes */
+  body {
+    /* Ajoutez ici les styles spécifiques pour la version mobile/tablette */
+  }
 }
 
 header {
